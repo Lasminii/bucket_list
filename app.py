@@ -11,9 +11,9 @@ app = Flask(__name__)
 def home():
    return render_template('index.html')
 
-@app.route("/bucket", methods=["POST"])
+@app.route("/spartapedia", methods=["POST"])
 def bucket_post():
-    bucket_receive = request.form['bucket_give']
+    bucket_receive = request.form['spartapedia_give']
     count = db.bucket.count_documents({})
     num = count + 1
     doc = {
